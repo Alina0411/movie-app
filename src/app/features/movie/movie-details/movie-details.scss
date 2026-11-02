@@ -1,0 +1,13 @@
+.movie-details--content {
+  display: grid;
+  grid-template-columns:  1fr minmax(auto, 458px);
+  padding-top: 87px;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.movie-details__description {
+  color: var(--color-text-muted);
+  line-height: 140%;
+  font-size: 16px;
+}

@@ -1,0 +1,39 @@
+<section class="catalog" aria-labelledby="catalog-title">
+  <div class="container">
+    <h1 class="title__section spacer-md" id="catalog-title">
+      Каталог фильмов и сериалов
+    </h1>
+
+    @for (item of movieWithGenre(); track item.genre.id) {
+      <div
+        class="catalog__section"
+      >
+        <h2 class="catalog__genre-title">
+          {{ item.genre.name }}
+        </h2>
+
+        <app-slider variant="default" class="catalog__slider">
+          @for (movie of item.movies; track movie.id) {
+            <swiper-slide>
+              <app-card
+                [id]="movie.id"
+                [title]="movie.title"
+                [poster]="movie.poster_path"
+                [rating]="movie.vote_average"
+                [type]="'Фильм'"
+                [genre]="movie.genresMovie"
+              />
+            </swiper-slide>
+          }
+        </app-slider>
+      </div>
+    }
+
+    <app-button
+      [variant]="'secondary'"
+      [text]="'Посмотреть все'"
+    >
+    </app-button>
+  </div>
+
+</section>

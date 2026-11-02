@@ -1,0 +1,67 @@
+@if (movie(); as movie) {
+  <app-movie-hero
+    [background]="'https://image.tmdb.org/t/p/w500' + movie.backdrop_path"
+    [title]="movie.title"
+    [adult]="movie.adult"
+    [rating]="movie.vote_average"
+    [date]="movie.release_date"
+    [countries]="movie.production_countries"
+    [runtime]="movie.runtime"
+    [genres]="genresName()"
+    (watchVideo)="playVideo(movie.id)"
+    (favorites)= "toggleFavorite(movie.id)"
+    [isFavorite]="isFavorite()"
+  />
+
+<div class="container">
+  <div class="movie-details--content">
+    <div class="movie-details__main ">
+      <h2 class="title__section spacer-md">
+       О фильме
+      </h2>
+
+      <p class="movie-details__description">{{movie.overview}}</p>
+    </div>
+
+      @if (rows()) {
+        <div class="movie-details__aside ">
+          <app-info-list
+            [items]="rows()"
+          >
+          </app-info-list>
+        </div>
+      }
+  </div>
+
+  <app-movie-reviews
+    [id]="movie.id"
+  >
+
+  </app-movie-reviews>
+
+  <div>
+    <h2 class="title__section spacer-md">Если вам понравился "{{movie.title}}"</h2>
+    <app-slider variant="default" class="catalog__slider">
+      @for (movie of similarMovies(); track movie.id) {
+        <swiper-slide>
+          <app-card
+            [id]="movie.id"
+            [title]="movie.title"
+            [poster]="movie.poster_path"
+            [rating]="movie.vote_average"
+            [type]="'Фильм'"
+          />
+        </swiper-slide>
+      }
+    </app-slider>
+  </div>
+
+</div>
+
+}
+
+
+
+
+
+

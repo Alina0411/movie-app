@@ -1,0 +1,130 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  /* Colors */
+  --color-bg: #141025;
+  --color-dark: #141025;
+  --color-surface: #1b1b23;
+  --color-text: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.5);
+  --color-accent: #ED0A32;
+  --color-accent-secondary: #5ABF76;
+  --font: 'ProximaNova', sans-serif;
+  --header-height: 84px;
+
+
+  /* Layout */
+  --container-width: 1200px;
+  --page-padding: 24px;
+
+  /* Radius */
+  --radius: 10px;
+
+  /* Spacing */
+  --space-sm: 6px;
+  --space-md: 16px;
+  --space-lg: 24px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+ul,li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: block;
+  height: 100vh;
+  font-family: var(--font);
+}
+
+.container {
+  padding: 0 100px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+
+@import 'swiper/css/bundle';
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('/assets/fonts/proxomaNova/proximanova_light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('/assets/fonts/proxomaNova/proximanova_black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('/assets/fonts/proxomaNova/proximanova_boldit.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('/assets/fonts/proxomaNova/proximanova_bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.title__section {
+  color: var(--color-text);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.spacer {
+  &-sm {
+    margin-bottom: 33px;
+  }
+
+  &-md {
+    margin-bottom: 60px;
+  }
+}

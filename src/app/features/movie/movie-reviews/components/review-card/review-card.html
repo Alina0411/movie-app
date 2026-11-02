@@ -1,0 +1,58 @@
+@if (review(); as review) {
+  <article class="review-card">
+    <header class="review-card__header">
+      <div class="review-card__avatar">
+        <img
+          [src]=" review.author_details.avatar_path === null ? '/assets/images/avatar/avatar.png' : 'https://secure.gravatar.com/avatar' + review.author_details.avatar_path"
+          [alt]="review.author"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="review-card__author">
+        <h3>{{ review.author }}</h3>
+        <span class="date">{{ review.created_at | date: 'd MMMM yyyy' }}</span>
+      </div>
+    </header>
+
+    <div class="review-card__info">
+      @if (review.author_details.rating !== null) {
+        <span class="rating">
+            {{ review.author_details.rating }}
+          </span>
+      }
+
+      <span class="description">{{ review.author }}</span>
+    </div>
+
+    <div class="review-card__content">
+      {{ review.content }}
+    </div>
+
+    <div class="review-card__actions">
+      <button class="review-card__action">
+        <svg>
+          <use href="/assets/images/icons/sprite.svg#comment"></use>
+        </svg>
+        <span>1</span>
+      </button>
+
+      <button class="review-card__action">
+        <svg>
+          <use href="/assets/images/icons/sprite.svg#like"></use>
+        </svg>
+        <span>20</span>
+      </button>
+
+      <button class="review-card__action">
+        <svg>
+          <use href="/assets/images/icons/sprite.svg#dislike"></use>
+        </svg>
+        <span>5</span>
+      </button>
+    </div>
+
+    <div class="review-card__divider"></div>
+
+  </article>
+}

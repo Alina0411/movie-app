@@ -1,0 +1,23 @@
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 154px 1fr;
+    gap: 48px;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+  }
+
+  &__label {
+
+    color: var(--color-text-muted);
+  }
+
+  &__value {
+    color: var(--color-text);
+  }
+}

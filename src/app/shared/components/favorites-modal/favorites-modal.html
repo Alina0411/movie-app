@@ -1,0 +1,33 @@
+<div class="favorites-modal">
+  <div class="favorites-modal__overlay" (click)="close.emit()"></div>
+
+  <div class="favorites-modal__content">
+    <div class="favorites-modal__header">
+      <h2 class="favorites-modal__title">Избранное</h2>
+      <button class="favorites-modal__close" aria-label="Закрыть" (click)="close.emit()">
+        <svg aria-hidden="true">
+          <use href="/assets/images/icons/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+
+    @if (moviesFavorite().length === 0) {
+      <p class="favorites-modal__empty">Вы ещё не добавили фильмы в избранное</p>
+    } @else {
+      <div class="favorites-modal__grid">
+        @for (movie of moviesFavorite(); track movie.id) {
+          <a class="favorites-modal__item"
+             [routerLink]="['/movie', movie.id]">
+            <img
+              class="favorites-modal__img"
+              [src]="'https://image.tmdb.org/t/p/w200' + movie.poster_path"
+              [alt]="movie.title"
+              loading="lazy"
+            />
+            <span class="favorites-modal__name">{{ movie.title }}</span>
+          </a>
+        }
+      </div>
+    }
+  </div>
+</div>

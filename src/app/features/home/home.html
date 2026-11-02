@@ -1,0 +1,10 @@
+@if (popularMovies$ | async; as movies) {
+  <app-hero [movies]="movies" />
+}
+<app-advantages></app-advantages>
+
+@if (homeGenres$ |async; as genreWithMovies) {
+  <app-movie-catalog [movieWithGenre]=genreWithMovies></app-movie-catalog>
+}
+
+

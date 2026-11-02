@@ -1,0 +1,9 @@
+<h2 class="title__section spacer-md">Рецензии</h2>
+
+@for (review of reviewsS | async; track review.id) {
+    <app-review-card
+      [review] = 'review'
+    >
+    </app-review-card>
+
+}

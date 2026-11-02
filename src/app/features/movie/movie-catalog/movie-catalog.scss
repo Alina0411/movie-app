@@ -1,0 +1,14 @@
+.catalog__genre-title::first-letter {
+  text-transform: uppercase;
+}
+.catalog__genre-title {
+  margin-bottom: 20px;
+}
+.catalog__section {
+  margin-bottom: 50px;
+  &:last-child {
+    margin-bottom: 35px;
+  }
+}
+
+

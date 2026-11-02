@@ -1,0 +1,43 @@
+.slider {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  .slider__button {
+    all: unset;
+    cursor: pointer;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--color-text-muted);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    &-next {
+      right: -60px;
+    }
+    &-prev {
+      left: -60px;
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    svg {
+      display: block;
+      width: 35px;
+      height: 23px;
+      color: inherit;
+    }
+
+    &:hover {
+      color: var(--color-text);
+    }
+  }
+
+  swiper-container {
+    height: 100%;
+  }
+}
+
+

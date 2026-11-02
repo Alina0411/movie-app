@@ -1,0 +1,18 @@
+<div class="slider">
+  <button type="button" #prevBtn class="slider__button slider__button-prev">
+    <svg aria-hidden="true">
+      <use [attr.href]="'/assets/images/icons/sprite.svg#arrow'"></use>
+    </svg>
+  </button>
+
+  <swiper-container #swiper
+                    init="false">
+    <ng-content />
+  </swiper-container>
+
+  <button type="button" #nextBtn class="slider__button slider__button-next">
+    <svg aria-hidden="true">
+      <use [attr.href]="'/assets/images/icons/sprite.svg#arrow'"></use>
+    </svg>
+  </button>
+</div>

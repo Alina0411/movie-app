@@ -1,0 +1,173 @@
+$footer-text: #fff;
+$footer-muted: #6b6a7a;
+$footer-border: rgba(255, 255, 255, 0.08);
+
+.footer {
+  padding: 50px 0 30px;
+  border-top: 1px solid $footer-border;
+  background:
+    radial-gradient(60% 120% at 100% 80%, rgba(120, 10, 50, 0.45) 0%, transparent 70%),
+    #12101f;
+  color: $footer-text;
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+  }
+
+  // --- бренд ---
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 170px;
+  }
+
+  &__logo img {
+    display: block;
+    height: 20px;
+    width: auto;
+  }
+
+  &__copyright {
+    margin: 0;
+    font-size: 12px;
+    color: $footer-muted;
+  }
+
+  &__navigation {
+    display: flex;
+    flex: 1;
+    gap: 60px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0 0 14px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: $footer-text;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    font-size: 16px;
+    color: $footer-muted;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: $footer-text;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    .footer__title {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: $footer-muted;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      color: $footer-text;
+    }
+  }
+
+  &__icon {
+    display: block;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+
+  &__social-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__social-link {
+    display: inline-flex;
+    color: $footer-muted;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $footer-text;
+    }
+  }
+}
+
+// --- адаптив ---
+@media (max-width: 1024px) {
+  .footer {
+    &__main {
+      flex-wrap: wrap;
+    }
+
+    &__brand {
+      flex: 1 1 100%;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__navigation {
+      flex: 1 1 100%;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    &__navigation {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &__brand {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+}

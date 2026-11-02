@@ -1,0 +1,14 @@
+@if (variant() === 'icon') {
+  <button
+    [class.favorite]="favorite()"
+    [class]="'btn btn-' + variant()"
+  >
+    <svg aria-hidden="true">
+      <use [attr.href]="'/assets/images/icons/sprite.svg#' + icon()"></use>
+    </svg>
+  </button>
+} @else {
+  <button
+    [class.favorite]="favorite()"
+    [class]="'btn btn-' + variant()">{{ text() }}</button>
+}

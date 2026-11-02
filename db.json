@@ -1,0 +1,124 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Интерстеллар",
+      "originalTitle": "Interstellar",
+      "overview": "Команда исследователей отправляется за пределы Солнечной системы в поисках нового дома для человечества.",
+      "releaseDate": "2014-11-07",
+      "voteAverage": 8.7,
+      "runtime": 169,
+      "genres": ["Фантастика", "Драма", "Приключения"],
+      "posterPath": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+      "backdropPath": "https://image.tmdb.org/t/p/w1280/xJHokMbljvjADYdit5fK5VQsXEG.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Начало",
+      "originalTitle": "Inception",
+      "overview": "Вор, умеющий проникать в сны, получает задание внедрить идею в сознание человека.",
+      "releaseDate": "2010-07-16",
+      "voteAverage": 8.4,
+      "runtime": 148,
+      "genres": ["Фантастика", "Боевик", "Триллер"],
+      "posterPath": "https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg",
+      "backdropPath": "https://image.tmdb.org/t/p/w1280/s3TBrRGB1iav7gFOCNx3H31MoES.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Побег из Шоушенка",
+      "originalTitle": "The Shawshank Redemption",
+      "overview": "История банкира, который сохраняет надежду и стремится обрести свободу, находясь в тюрьме.",
+      "releaseDate": "1994-09-23",
+      "voteAverage": 8.7,
+      "runtime": 142,
+      "genres": ["Драма"],
+      "posterPath": "https://image.tmdb.org/t/p/w500/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
+      "backdropPath": "https://image.tmdb.org/t/p/w1280/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Дюна: Часть вторая",
+      "originalTitle": "Dune: Part Two",
+      "overview": "Пол Атрейдес объединяется с фременами и продолжает путь на планете Арракис.",
+      "releaseDate": "2024-03-01",
+      "voteAverage": 8.2,
+      "runtime": 166,
+      "genres": ["Фантастика", "Приключения", "Драма"],
+      "posterPath": "https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg",
+      "backdropPath": "https://image.tmdb.org/t/p/w1280/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Паразиты",
+      "originalTitle": "Parasite",
+      "overview": "Бедная семья постепенно становится частью жизни состоятельной семьи, но всё меняется из-за скрытых обстоятельств.",
+      "releaseDate": "2019-05-30",
+      "voteAverage": 8.5,
+      "runtime": 132,
+      "genres": ["Триллер", "Драма", "Комедия"],
+      "posterPath": "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+      "backdropPath": "https://image.tmdb.org/t/p/w1280/ApiBzeaa95TNYliSbQ8pJv4Fje7.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Матрица",
+      "originalTitle": "The Matrix",
+      "overview": "Программист узнаёт, что привычная реальность может оказаться иллюзией.",
+      "releaseDate": "1999-03-31",
+      "voteAverage": 8.2,
+      "runtime": 136,
+      "genres": ["Фантастика", "Боевик"],
+      "posterPath": "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+      "backdropPath": "https://image.tmdb.org/t/p/w1280/fNG7i7RqMErkcqhohV2a6cV1Ehy.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Ла-Ла Ленд",
+      "originalTitle": "La La Land",
+      "overview": "Музыкант и начинающая актриса влюбляются в Лос-Анджелесе и ищут баланс между любовью и мечтой.",
+      "releaseDate": "2016-12-09",
+      "voteAverage": 8.0,
+      "runtime": 128,
+      "genres": ["Драма", "Мелодрама", "Музыка"],
+      "posterPath": "https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
+      "backdropPath": "https://image.tmdb.org/t/p/w1280/qJeU7KM4nT2C1WpOrwPcSDGFUWE.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Унесённые призраками",
+      "originalTitle": "Spirited Away",
+      "overview": "Девочка попадает в мир духов и пытается спасти родителей и вернуться домой.",
+      "releaseDate": "2001-07-20",
+      "voteAverage": 8.5,
+      "runtime": 125,
+      "genres": ["Анимация", "Приключения", "Фэнтези"],
+      "posterPath": "https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+      "backdropPath": "https://image.tmdb.org/t/p/w1280/Ab8mkHmkYADjU7wQiOkia9BzGvS.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Гарри Поттер и философский камень",
+      "originalTitle": "Harry Potter and the Philosopher's Stone",
+      "overview": "Гарри узнаёт, что он волшебник, и начинает учиться в школе магии Хогвартс.",
+      "releaseDate": "2001-11-16",
+      "voteAverage": 7.9,
+      "runtime": 152,
+      "genres": ["Фэнтези", "Приключения", "Семейный"],
+      "posterPath": "https://image.tmdb.org/t/p/w500/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+      "backdropPath": "https://image.tmdb.org/t/p/w1280/hziiv14OpD73u9gAak4XDDfBKa2.jpg"
+    },
+    {
+      "id": 10,
+      "title": "ВАЛЛ-И",
+      "originalTitle": "WALL-E",
+      "overview": "Робот, убирающий заброшенную Землю, отправляется в космос и находит нечто, меняющее его жизнь.",
+      "releaseDate": "2008-06-27",
+      "voteAverage": 8.1,
+      "runtime": 98,
+      "genres": ["Анимация", "Фантастика", "Семейный"],
+      "posterPath": "https://image.tmdb.org/t/p/w500/hbhFnRzzg6YY3Zx1CzftHSxg0px.jpg",
+      "backdropPath": "https://image.tmdb.org/t/p/w1280/2qr5r2h4Q4c8GfR5vKf5sZ2V6sP.jpg"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+<div class="header">
+  <div class="container">
+    <div class="header__wrapper" [ngClass]="variant()">
+      <div class="header-image">
+        <app-logo></app-logo>
+      </div>
+
+      <div class="menu">
+        @for (item of navHeader; track item.route) {
+          <li>
+            <a [routerLink]="item.route">{{ item.title }}</a>
+          </li>
+        }
+      </div>
+
+      @switch (variant()) {
+        @case ('inner') {
+          <button [attr.aria-label]="'search'"
+                  class="btn"
+                  (click)="toggleSearch()"
+          >
+            <svg aria-hidden="true">
+              <use [attr.href]="'/assets/images/icons/sprite.svg#search'"></use>
+            </svg>
+          </button>
+
+
+          <div class="avatar">
+            <img src="/assets/images/avatar/avatar.png">
+          </div>
+        }
+        @case ('default') {
+          <div class="btn-panel">
+            @for (button of buttonPanel; track button.route) {
+              <button [attr.aria-label]="button.ariaLabel"
+                      class="btn"
+                      [ngClass]="button.className"
+                      (click)="onButtonClick(button.iconId)"
+              >
+                <svg aria-hidden="true">
+                  <use [attr.href]="'/assets/images/icons/sprite.svg#' + button.iconId"></use>
+                </svg>
+
+                @if (button.text) {
+                  {{ button.text }}
+                }
+              </button>
+            }
+          </div>
+        }
+      }
+    </div>
+  </div>
+</div>
+@if (isSearchOpen()) {
+  <app-search
+    (closeSearch)="closeSearch()"
+  >
+  </app-search>
+}

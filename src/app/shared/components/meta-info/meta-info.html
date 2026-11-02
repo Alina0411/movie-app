@@ -1,0 +1,20 @@
+<ul class="meta">
+  @if (rating()) {
+    <li class="meta__rating">{{ rating() | number: '1.0-1' }}</li>
+  }
+  @if (year()) {
+    <li>{{ year() }}</li>
+  }
+  @if (country()) {
+    <li>{{ country() }}</li>
+  }
+  @if (type()) {
+    <li>{{ type() }}</li>
+  }
+  @if (genreText()) {
+    <li>{{ genreText()?.join(', ') }}</li>
+  }
+  @if (runtime()) {
+    <li>{{ runtime() | duration }}</li>
+  }
+</ul>

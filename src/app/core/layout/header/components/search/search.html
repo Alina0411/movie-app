@@ -1,0 +1,74 @@
+<div class="search">
+  <div class="container">
+    <div class="search__header">
+      <app-logo />
+
+      <div class="search__input-wrapper">
+        <svg class="search__icon" aria-hidden="true">
+          <use href="/assets/images/icons/sprite.svg#search"></use>
+        </svg>
+        <input
+          class="search__input"
+          type="text"
+          (input)="onSearch($event)"
+          placeholder="Название фильма, сериала, или имя актёра, режиссёра"
+        />
+        <button class="search__close" aria-label="Закрыть" (click)="closeSearch.emit()">
+          <svg aria-hidden="true">
+            <use href="/assets/images/icons/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+
+      <app-button
+        [variant]="'secondary'"
+        [text]="'Войти'"
+      ></app-button>
+    </div>
+
+
+    <div class="search__body ">
+      @if (searchResults$ | async; as results) {
+      <section class="search__section">
+          <h2 class="search__section-title">Все результаты</h2>
+          <div class="search__movies-grid">
+            @for (movie of results ; track movie.id) {
+              <a class="search__movie-item"  [routerLink]="['/movie', movie.id]">
+                <img class="search__movie-img" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+                     [alt]="movie.title" loading="lazy" />
+                <span class="search__movie-name">{{ movie.title }}</span>
+              </a>
+            }
+          </div>
+        </section>
+      } @else {
+        <section class="search__section">
+          <h2 class="search__section-title">Часто ищут</h2>
+          <div class="search__movies-grid">
+            @for (movie of popularMovies$ | async | slice:0: 6; track movie.id) {
+              <a class="search__movie-item"  [routerLink]="['/movie', movie.id]">
+                <img class="search__movie-img" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+                     [alt]="movie.title" loading="lazy" />
+                <span class="search__movie-name">{{ movie.title }}</span>
+              </a>
+            }
+          </div>
+        </section>
+
+        <section class="search__section">
+          <h2 class="search__section-title">Актёры и режиссёры</h2>
+
+          <div class="search__persons-grid">
+            @for (person of popularPerson$| async| slice:0: 6; track person.id) {
+              <div class="search__person-item">
+                <span class="search__person-name">{{ person.name }}</span>
+                <span class="search__person-role">{{ person.known_for_department | departmentRu}}</span>
+              </div>
+            }
+          </div>
+        </section>
+      }
+    </div>
+  </div>
+
+</div>

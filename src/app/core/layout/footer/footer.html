@@ -1,0 +1,74 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <app-logo></app-logo>
+
+          <p class="footer__copyright">© КиноДом 2026</p>
+        </div>
+
+        <div class="footer__navigation">
+          @for (column of navColumns; track $index) {
+            <div class="footer__column">
+              @for (group of column; track group.title) {
+                <nav class="footer__group" [attr.aria-label]="group.title">
+                  <h3 class="footer__title">{{ group.title }}</h3>
+
+                  @if (group.items.length) {
+                    <ul class="footer__list">
+                      @for (item of group.items; track item.route) {
+                        <li class="footer__item">
+                          <a class="footer__link" [routerLink]="item.route">
+                            {{ item.title }}
+                          </a>
+                        </li>
+                      }
+                    </ul>
+                  }
+                </nav>
+              }
+            </div>
+          }
+        </div>
+
+        <!-- Контакты и соцсети -->
+        <div class="footer__contacts">
+          <div class="footer__support">
+            <h3 class="footer__title">Техническая поддержка</h3>
+
+            @for (contact of supportContacts; track contact.href) {
+              <a class="footer__contact" [href]="contact.href">
+                <svg class="footer__icon" aria-hidden="true">
+                  <use [attr.href]="'/assets/images/icons/sprite.svg#' + contact.iconId"></use>
+                </svg>
+                <span>{{ contact.title }}</span>
+              </a>
+            }
+          </div>
+
+          <div class="footer__social">
+            <h3 class="footer__title">Подписывайтесь на нас</h3>
+
+            <div class="footer__social-list">
+              @for (social of socialLinks; track social.href) {
+                <a
+                  class="footer__social-link"
+                  [href]="social.href"
+                  [attr.aria-label]="social.title"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="footer__icon" aria-hidden="true">
+                    <use [attr.href]="'/assets/images/icons/sprite.svg#' + social.iconId"></use>
+                  </svg>
+                </a>
+              }
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>

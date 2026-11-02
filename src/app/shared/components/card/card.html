@@ -1,0 +1,30 @@
+<article class="card">
+  <a
+    class="card__link"
+    [routerLink]="['/movie', id()]"
+  >
+    <div class="card__poster">
+      <img
+        class="image"
+        [src]="'https://image.tmdb.org/t/p/w500' + poster()"
+        [alt]="title()"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="card__content">
+      <div class="card__meta">
+        <app-meta-info
+          [rating]="rating()"
+          [type]="type()"
+          [genreText]="genre() | slice : 0:  2 "
+        >
+        </app-meta-info>
+      </div>
+
+      <h2 class="card__title">
+        {{ title() }}
+      </h2>
+    </div>
+  </a>
+</article>

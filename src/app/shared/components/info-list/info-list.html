@@ -1,0 +1,19 @@
+<ul class="info-list">
+  @for (item of items(); track item.label) {
+    <li class="info-list__row">
+      <span class="info-list__label">{{ item.label }}: </span>
+
+      @if (item.label === 'Время' && typeof item.value === 'number') {
+        <span class="info-list__value">
+          {{ item.value | duration }}
+        </span>
+      } @else if (item.value instanceof Array) {
+        <span class="info-list__value">
+          {{ item.value.slice(0, 10).join(', ') }}
+        </span>
+      } @else {
+        <span class="info-list__value">{{ item.value }}</span>
+      }
+    </li>
+  }
+</ul>

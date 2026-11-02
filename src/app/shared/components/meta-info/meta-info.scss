@@ -1,0 +1,44 @@
+:host {
+  display: block;
+  --meta-size: 16px;
+  --meta-color: var(--color-text-muted);
+}
+
+
+:host([data-variant='card']) {
+    margin-bottom: 2px;
+}
+
+:host([data-variant='hero']) {
+  --meta-size: 18px;
+  --meta-color: #fff;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--meta-size);
+  color: var(--meta-color);
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  li + li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    margin: 0 6px;
+    border-radius: 50%;
+    background-color: currentColor;
+  }
+}
+
+.meta__rating {
+  color: var(--color-accent);
+}

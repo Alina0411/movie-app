@@ -1,0 +1,19 @@
+<section class="advantages">
+  <div class="container">
+    <h2 class="title__section spacer-sm">Преимущества КиноДома </h2>
+    <div class="advantages-list">
+      @for (advantage of advantages; track advantage.id) {
+        <div class="advantage-item">
+          <div class="icon-circle">
+            <img [src]="'/assets/images/advantages/' + advantage.icon">
+          </div>
+          <div class="info">
+            <h4 class="title">{{ advantage.title }}</h4>
+            <div class="description">{{ advantage.description }}</div>
+          </div>
+
+        </div>
+      }
+    </div>
+  </div>
+</section>
