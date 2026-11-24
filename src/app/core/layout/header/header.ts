@@ -59,7 +59,6 @@ export class Header {
 
   toggleSearch() {
     this.isSearchOpen.set(!this.isSearchOpen());
-    console.log(this.isSearchOpen);
   }
 
   closeSearch() {

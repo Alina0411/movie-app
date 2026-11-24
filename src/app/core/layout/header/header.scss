@@ -40,7 +40,6 @@
   align-items: center;
   margin-right: 60px;
 
-
   img {
     object-fit: contain;
   }
@@ -88,10 +87,10 @@
     stroke: currentColor;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     border-color: inherit;
     color: var(--color-text);
-
   }
 }
 

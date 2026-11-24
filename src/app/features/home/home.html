@@ -3,8 +3,6 @@
 }
 <app-advantages></app-advantages>
 
-@if (homeGenres$ |async; as genreWithMovies) {
-  <app-movie-catalog [movieWithGenre]=genreWithMovies></app-movie-catalog>
+@if (homeGenres$ | async; as genreWithMovies) {
+  <app-movie-catalog [movieWithGenre]="genreWithMovies"></app-movie-catalog>
 }
-
-

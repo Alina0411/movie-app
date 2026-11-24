@@ -1,26 +1,26 @@
 import { Injectable } from '@angular/core';
-import { Movie } from '../../features/movie/models/movie.models';
+import { FAVORITES_KEY } from '../../shared/constants/constants';
 
 @Injectable({
   providedIn: 'root',
 })
 export class Favorites {
   getAll(): number[] {
-    return JSON.parse(localStorage.getItem('favorites') ?? '[]');
+    return JSON.parse(localStorage.getItem(FAVORITES_KEY) ?? '[]');
   }
   addFavorite(id: number) {
     const currentFavorites = this.getAll();
     currentFavorites.push(id);
-    localStorage.setItem('favorites', JSON.stringify(currentFavorites));
+    localStorage.setItem(FAVORITES_KEY, JSON.stringify(currentFavorites));
   }
   removeFavorite(id: number) {
     const currentFavorites = this.getAll();
     const update = currentFavorites.filter((f) => f !== id);
-    localStorage.setItem('favorites', JSON.stringify(update));
+    localStorage.setItem(FAVORITES_KEY, JSON.stringify(update));
   }
 
   isFavorite(id: number) {
     const currentFavorites = this.getAll();
-    return  currentFavorites.includes(id);
+    return currentFavorites.includes(id);
   }
 }

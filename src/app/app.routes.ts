@@ -4,7 +4,8 @@ export const routes: Routes = [
   { path: '', loadComponent: () => import('./features/home/home').then((m) => m.Home) },
   {
     path: 'movie/:id',
-    loadComponent: () => import('./features/movie/movie-details/movie-details').then((m) => m.MovieDetails) ,
+    loadComponent: () =>
+      import('./features/movie/movie-details/movie-details').then((m) => m.MovieDetails),
     data: { headerVariant: 'inner' },
   },
 ];

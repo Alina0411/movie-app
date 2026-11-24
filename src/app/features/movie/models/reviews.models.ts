@@ -1,9 +1,9 @@
 export interface ReviewResponse {
-  id: number,
-  page: number,
-  results: Review[],
-  total_pages: number,
-  total_results: number,
+  id: number;
+  page: number;
+  results: Review[];
+  total_pages: number;
+  total_results: number;
 }
 
 export interface Review {
@@ -20,5 +20,3 @@ export interface Review {
   updated_at: string;
   url: string;
 }
-
-

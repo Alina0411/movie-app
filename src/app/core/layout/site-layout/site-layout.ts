@@ -1,6 +1,6 @@
-import { Component  } from '@angular/core';
+import { Component } from '@angular/core';
 import { Header } from '../header/header';
-import {  RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { Footer } from '../footer/footer';
 
 @Component({
@@ -9,6 +9,4 @@ import { Footer } from '../footer/footer';
   templateUrl: './site-layout.html',
   styleUrl: './site-layout.scss',
 })
-export class SiteLayout {
-
-}
+export class SiteLayout {}

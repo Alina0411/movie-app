@@ -20,22 +20,22 @@
         </button>
       </div>
 
-      <app-button
-        [variant]="'secondary'"
-        [text]="'Войти'"
-      ></app-button>
+      <app-button [variant]="'secondary'" [text]="'Войти'"></app-button>
     </div>
 
-
-    <div class="search__body ">
+    <div class="search__body">
       @if (searchResults$ | async; as results) {
-      <section class="search__section">
+        <section class="search__section">
           <h2 class="search__section-title">Все результаты</h2>
           <div class="search__movies-grid">
-            @for (movie of results ; track movie.id) {
-              <a class="search__movie-item"  [routerLink]="['/movie', movie.id]">
-                <img class="search__movie-img" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
-                     [alt]="movie.title" loading="lazy" />
+            @for (movie of results; track movie.id) {
+              <a class="search__movie-item" [routerLink]="['/movie', movie.id]">
+                <img
+                  class="search__movie-img"
+                  [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+                  [alt]="movie.title"
+                  loading="lazy"
+                />
                 <span class="search__movie-name">{{ movie.title }}</span>
               </a>
             }
@@ -45,10 +45,14 @@
         <section class="search__section">
           <h2 class="search__section-title">Часто ищут</h2>
           <div class="search__movies-grid">
-            @for (movie of popularMovies$ | async | slice:0: 6; track movie.id) {
-              <a class="search__movie-item"  [routerLink]="['/movie', movie.id]">
-                <img class="search__movie-img" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
-                     [alt]="movie.title" loading="lazy" />
+            @for (movie of popularMovies$ | async | slice: 0 : 6; track movie.id) {
+              <a class="search__movie-item" [routerLink]="['/movie', movie.id]">
+                <img
+                  class="search__movie-img"
+                  [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+                  [alt]="movie.title"
+                  loading="lazy"
+                />
                 <span class="search__movie-name">{{ movie.title }}</span>
               </a>
             }
@@ -59,10 +63,12 @@
           <h2 class="search__section-title">Актёры и режиссёры</h2>
 
           <div class="search__persons-grid">
-            @for (person of popularPerson$| async| slice:0: 6; track person.id) {
+            @for (person of popularPerson$ | async | slice: 0 : 6; track person.id) {
               <div class="search__person-item">
                 <span class="search__person-name">{{ person.name }}</span>
-                <span class="search__person-role">{{ person.known_for_department | departmentRu}}</span>
+                <span class="search__person-role">{{
+                  person.known_for_department | departmentRu
+                }}</span>
               </div>
             }
           </div>
@@ -70,5 +76,4 @@
       }
     </div>
   </div>
-
 </div>

@@ -50,16 +50,10 @@ export class MovieDetails implements OnInit {
   ngOnInit() {
     const id: number = Number(this.route.snapshot.params['id']);
     this.isFavorite.set(this.favoriteService.isFavorite(id));
-    console.log('isFavorite:', this.favoriteService.isFavorite(id));
     this.movieService.getMovieDetailsById(id).subscribe((m) => {
-      console.log(m);
       this.movie.set(m);
     });
 
-    console.log(typeof id, id);
-
-
-    console.log(this.isFavorite())
     this.movieService.getMovieDetailsByIdCredit(id).subscribe((result) => this.credits.set(result));
 
     this.movieService.getSimilarMovies(id).subscribe((result) => {
@@ -90,9 +84,7 @@ export class MovieDetails implements OnInit {
   });
 
   playVideo(id: number) {
-    console.log(id);
     this.movieService.getVideoMovie(id).subscribe((result) => {
-      console.log(result, 'result');
       const video = result.find((result) => result.site === 'YouTube');
       if (!video) {
         return;
@@ -103,11 +95,10 @@ export class MovieDetails implements OnInit {
 
   toggleFavorite(id: number) {
     if (this.isFavorite()) {
-      this.favoriteService.removeFavorite(id)
+      this.favoriteService.removeFavorite(id);
     } else {
-      this.favoriteService.addFavorite(id)
+      this.favoriteService.addFavorite(id);
     }
     this.isFavorite.set(!this.isFavorite());
-    console.log('ddd');
   }
 }

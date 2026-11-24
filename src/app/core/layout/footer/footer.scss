@@ -6,8 +6,7 @@ $footer-border: rgba(255, 255, 255, 0.08);
   padding: 50px 0 30px;
   border-top: 1px solid $footer-border;
   background:
-    radial-gradient(60% 120% at 100% 80%, rgba(120, 10, 50, 0.45) 0%, transparent 70%),
-    #12101f;
+    radial-gradient(60% 120% at 100% 80%, rgba(120, 10, 50, 0.45) 0%, transparent 70%), #12101f;
   color: $footer-text;
 
   &__main {

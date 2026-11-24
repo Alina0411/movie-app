@@ -19,7 +19,9 @@ import { GenreWithMovies, MovieGenreId } from '../movie/models/genre.models';
 })
 export class Home {
   movieService = inject(MovieService);
-  popularMovies$: Observable<Movie[]> = this.movieService.withGenres(this.movieService.getPopularMovies())
+  popularMovies$: Observable<Movie[]> = this.movieService.withGenres(
+    this.movieService.getPopularMovies(),
+  );
   movieWithGenre$: Observable<GenreWithMovies[]> = this.movieService.getMoviesByGenres();
   readonly homeGenres$ = this.movieService.getMoviesByGenres().pipe(
     map((genres) =>

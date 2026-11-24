@@ -1,6 +1,6 @@
 <div class="movie-details--hero">
   <div class="bg-img">
-    <img [src]="background()">
+    <img [src]="background()" />
   </div>
   <div class="movie-details__info">
     <div class="container">
@@ -13,20 +13,28 @@
       <div class="info-middle">
         <app-meta-info
           [rating]="rating()"
-          [year] = "date()"
+          [year]="date()"
           [genreText]="genres()"
           [runtime]="runtime()"
-          [country] = "countries()?.name"
+          [country]="countries()?.name"
         >
-
         </app-meta-info>
       </div>
 
       <div class="movie-hero__actions">
-        <app-button [text]="'Смотреть фильм'" ></app-button>
-        <app-button [variant]="'secondary'" [text]="'Трейлер'" (click)="watchedVideo()"></app-button>
-        <app-button [variant]="'icon'" [icon] = "'file-plus'"></app-button>
-        <app-button [variant]="'icon'" [icon] = "'heart'"  [favorite]="isFavorite()" (click)="toggleFavorite()"></app-button>
+        <app-button [text]="'Смотреть фильм'"></app-button>
+        <app-button
+          [variant]="'secondary'"
+          [text]="'Трейлер'"
+          (click)="watchedVideo()"
+        ></app-button>
+        <app-button [variant]="'icon'" [icon]="'file-plus'"></app-button>
+        <app-button
+          [variant]="'icon'"
+          [icon]="'heart'"
+          [favorite]="isFavorite()"
+          (click)="toggleFavorite()"
+        ></app-button>
       </div>
     </div>
   </div>

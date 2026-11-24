@@ -3,7 +3,6 @@ import { DatePipe } from '@angular/common';
 import { Slider } from '../../../../shared/components/slider/slider';
 import { Movie } from '../../../movie/models/movie.models';
 
-
 @Component({
   selector: 'app-hero',
   standalone: true,
@@ -14,5 +13,4 @@ import { Movie } from '../../../movie/models/movie.models';
 })
 export class Hero {
   movies = input<Movie[]>([]);
-
 }

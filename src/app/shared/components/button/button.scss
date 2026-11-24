@@ -54,7 +54,8 @@
       stroke: currentColor;
     }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border-color: inherit;
       color: var(--color-accent);
     }

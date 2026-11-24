@@ -13,4 +13,11 @@ export class Button {
   variant = input<'primary' | 'secondary' | 'icon'>('primary');
   icon = input<string>('icon');
   favorite = input<boolean>(false);
+  get buttonClasses() {
+    return {
+      btn: true,
+      [`btn-${this.variant()}`]: true,
+      favorite: this.favorite(),
+    };
+  }
 }

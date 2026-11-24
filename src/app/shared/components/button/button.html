@@ -1,14 +1,9 @@
 @if (variant() === 'icon') {
-  <button
-    [class.favorite]="favorite()"
-    [class]="'btn btn-' + variant()"
-  >
+  <button [ngClass]="buttonClasses">
     <svg aria-hidden="true">
       <use [attr.href]="'/assets/images/icons/sprite.svg#' + icon()"></use>
     </svg>
   </button>
 } @else {
-  <button
-    [class.favorite]="favorite()"
-    [class]="'btn btn-' + variant()">{{ text() }}</button>
+  <button [ngClass]="buttonClasses">{{ text() }}</button>
 }

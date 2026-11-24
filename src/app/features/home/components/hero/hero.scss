@@ -13,7 +13,7 @@
   padding-top: var(--header-height);
   background-size: contain;
   background-position: center;
-  background-image: url("/assets/images/bg/bg.png");
+  background-image: url('/assets/images/bg/bg.png');
   background-repeat: no-repeat;
 
   &__content {
@@ -22,7 +22,6 @@
 }
 
 .hero {
-
   min-height: 630px;
   padding-block: 30px;
   max-height: 1400px;
@@ -87,7 +86,6 @@
     height: 690px;
   }
 }
-
 
 swiper-slide {
   display: flex;
@@ -209,7 +207,6 @@ swiper-slide {
       &__label {
         padding: 2px 6px;
       }
-
     }
   }
 

@@ -16,8 +16,7 @@
     } @else {
       <div class="favorites-modal__grid">
         @for (movie of moviesFavorite(); track movie.id) {
-          <a class="favorites-modal__item"
-             [routerLink]="['/movie', movie.id]">
+          <a class="favorites-modal__item" [routerLink]="['/movie', movie.id]">
             <img
               class="favorites-modal__img"
               [src]="'https://image.tmdb.org/t/p/w200' + movie.poster_path"

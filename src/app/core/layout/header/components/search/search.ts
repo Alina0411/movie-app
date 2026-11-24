@@ -1,13 +1,13 @@
 import { Component, inject, output } from '@angular/core';
-import { Logo } from '../../../../../shared/components/logo/logo';
-import { Button } from '../../../../../shared/components/button/button';
-import { Movie } from '../../../../../features/movie/models/movie.models';
-import { MovieService } from '../../../../services/movie-service';
-import { PopularPerson } from '../../../../../features/movie/models/person.models';
 import { AsyncPipe, SlicePipe } from '@angular/common';
 import { debounceTime, filter, Observable, Subject, switchMap } from 'rxjs';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
-import { DepartmentRuPipe } from '../../../../../shared/pipes/department-ru-pipe';
+import { Logo } from '@shared/components/logo/logo';
+import { DepartmentRuPipe } from '@shared/pipes/department-ru-pipe';
+import { Button } from '@shared/components/button/button';
+import { MovieService } from '@core/services/movie-service';
+import { Movie } from '@features/movie/models/movie.models';
+import { PopularPerson } from '@features/movie/models/person.models';
 
 @Component({
   selector: 'app-search',

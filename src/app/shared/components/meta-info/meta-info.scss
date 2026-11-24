@@ -4,9 +4,8 @@
   --meta-color: var(--color-text-muted);
 }
 
-
 :host([data-variant='card']) {
-    margin-bottom: 2px;
+  margin-bottom: 2px;
 }
 
 :host([data-variant='hero']) {

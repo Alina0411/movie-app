@@ -1,8 +1,5 @@
 <article class="card">
-  <a
-    class="card__link"
-    [routerLink]="['/movie', id()]"
-  >
+  <a class="card__link" [routerLink]="['/movie', id()]">
     <div class="card__poster">
       <img
         class="image"
@@ -14,11 +11,7 @@
 
     <div class="card__content">
       <div class="card__meta">
-        <app-meta-info
-          [rating]="rating()"
-          [type]="type()"
-          [genreText]="genre() | slice : 0:  2 "
-        >
+        <app-meta-info [rating]="rating()" [type]="type()" [genreText]="genre() | slice: 0 : 2">
         </app-meta-info>
       </div>
 

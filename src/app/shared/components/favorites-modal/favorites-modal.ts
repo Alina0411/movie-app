@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-favorites-modal',
   standalone: true,
-  imports: [ RouterLink],
+  imports: [RouterLink],
   templateUrl: './favorites-modal.html',
   styleUrl: './favorites-modal.scss',
 })

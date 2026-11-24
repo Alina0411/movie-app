@@ -4,12 +4,12 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'duration',
 })
 export class DurationPipe implements PipeTransform {
-  transform(value: number | undefined, ...args: unknown[]): string  {
-    let result: string  = ''
+  transform(value: number | undefined, ...args: unknown[]): string {
+    let result: string = '';
 
     if (value == null || value <= 0) {
-       result += '-';
-       return result;
+      result += '-';
+      return result;
     }
 
     const hour = Math.floor(value / 60);
@@ -20,6 +20,6 @@ export class DurationPipe implements PipeTransform {
     if (minute > 0) {
       result += `${minute} мин`;
     }
-    return result
+    return result;
   }
 }

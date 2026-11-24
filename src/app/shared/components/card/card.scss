@@ -5,7 +5,7 @@
     transition: all 0.3s;
     &:hover {
       color: var(--color-text-muted);
-      .card__poster .image{
+      .card__poster .image {
         transform: scale(1.2);
       }
     }
@@ -45,7 +45,8 @@
     margin-bottom: 2px;
   }
 
-  .card__type, .card__genre {
+  .card__type,
+  .card__genre {
     position: relative;
 
     &::before {

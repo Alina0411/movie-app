@@ -11,7 +11,7 @@
     inset: 0;
     z-index: -1;
     content: '';
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
   }
 }
 
@@ -70,7 +70,8 @@
     height: 16px;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: var(--color-text-muted);
   }
 }
@@ -124,7 +125,6 @@
 .search__movie-name {
   font-size: 14px;
   font-weight: 700;
-
 }
 
 .search__persons-grid {

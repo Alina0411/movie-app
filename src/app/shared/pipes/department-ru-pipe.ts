@@ -11,6 +11,5 @@ export class DepartmentRuPipe implements PipeTransform {
       Directing: 'Режиссёр',
     };
     return map[value] ?? value;
-
   }
 }

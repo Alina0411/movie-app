@@ -16,8 +16,6 @@ export class MovieReviews implements OnInit {
   movieService = inject(MovieService);
   reviewsS!: Observable<Review[]>;
   ngOnInit() {
-    this.reviewsS = this.movieService.getReviewsMovies(this.id()).pipe(
-      tap(reviews => console.log(reviews)),
-    );
+    this.reviewsS = this.movieService.getReviewsMovies(this.id());
   }
 }
